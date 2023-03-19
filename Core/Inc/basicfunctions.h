@@ -14,6 +14,8 @@
 #include <stdio.h>
 #include <string.h>
 
-void digital_write(GPIO_TypeDef* type,uint16_t pin, bool state);
+
+
+void digital_write(char *type,uint16_t pin, bool state);
 
 #endif

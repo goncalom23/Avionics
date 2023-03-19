@@ -1,6 +1,6 @@
 #include "basicfunctions.h"
 
-void digital_write(GPIO_TypeDef* type,uint16_t pin, bool state)
+void digital_write(char *type,uint16_t pin, bool state)
 {
 	// type - GPIOA, GPIOB...
 	// pin - GPIO_Pin_0
@@ -9,8 +9,10 @@ void digital_write(GPIO_TypeDef* type,uint16_t pin, bool state)
 	char str2[]= "b";
 	char* str3 = str1 + str2;*/
 	printf("hello world");
+	char *aux = "GPIO";
+	strcat(aux,type);
+	HAL_GPIO_WritePin((GPIO_TypeDef*)aux,pin,state);
 
-	HAL_GPIO_WritePin(type,pin,state);
 }
 
 
