@@ -19,10 +19,6 @@
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
 
-#include <stdbool.h>
-#include "basicfunctions.h"
-#include <stdio.h>
-
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 
@@ -106,9 +102,12 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-	digital_write(GPIOB,LD1_Pin,1);
+	printf("hello world\r\n");
+	//HAL_UART_Transmit(&huart3, "hello\r\n", 13, 10);
+	//HAL_UART_Transmit(&huart3, "Hello nether", 13, 10);
+	digital_write("B",LD1_Pin,1);
 	HAL_Delay(1000);
-	digital_write(GPIOB,LD1_Pin,0);
+	digital_write("B",LD1_Pin,0);
 	HAL_Delay(1000);
   }
   /* USER CODE END 3 */

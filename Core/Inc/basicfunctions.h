@@ -16,6 +16,6 @@
 
 
 
-void digital_write(char *type,uint16_t pin, bool state);
+void digital_write(char* type,uint16_t pin, bool state);
 
 #endif
